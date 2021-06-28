@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		266E874D256359E900CF5151 /* ObjectDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E874C256359E900CF5151 /* ObjectDetector.swift */; };
+		269E7472255CC56200B1D6CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269E7471255CC56200B1D6CA /* AppDelegate.swift */; };
+		269E7474255CC56200B1D6CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269E7473255CC56200B1D6CA /* SceneDelegate.swift */; };
+		269E747B255CC56400B1D6CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 269E747A255CC56400B1D6CA /* Assets.xcassets */; };
+		269E7498255CCBA000B1D6CA /* InferenceModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 269E7496255CCBA000B1D6CA /* InferenceModule.mm */; };
+		3D93AD83CA851C20568DBC3F /* Pods_PassportScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57B91C286C71F3E271E3228 /* Pods_PassportScan.framework */; };
+		6D492623261172CB00FA4F2E /* TD3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D49261A261172CB00FA4F2E /* TD3.swift */; };
+		6D492624261172CB00FA4F2E /* TD1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D49261B261172CB00FA4F2E /* TD1.swift */; };
+		6D492625261172CB00FA4F2E /* TD2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D49261C261172CB00FA4F2E /* TD2.swift */; };
+		6D492626261172CB00FA4F2E /* MRZParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D49261E261172CB00FA4F2E /* MRZParser.swift */; };
+		6D492627261172CB00FA4F2E /* MRZFieldFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D49261F261172CB00FA4F2E /* MRZFieldFormatter.swift */; };
+		6D492628261172CB00FA4F2E /* String-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D492620261172CB00FA4F2E /* String-Ext.swift */; };
+		6D492629261172CB00FA4F2E /* MRZResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D492621261172CB00FA4F2E /* MRZResult.swift */; };
+		6D49262A261172CB00FA4F2E /* MRZField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D492622261172CB00FA4F2E /* MRZField.swift */; };
+		6DD5BB0B261D532000F3D813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD5BB09261D532000F3D813 /* ViewController.swift */; };
+		6DD5BB0C261D532000F3D813 /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD5BB0A261D532000F3D813 /* ResultController.swift */; };
+		6DD5BB11261D537F00F3D813 /* classes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6DD5BB0F261D537F00F3D813 /* classes.txt */; };
+		6DD5BB19261D53A300F3D813 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD5BB15261D53A300F3D813 /* LaunchScreen.storyboard */; };
+		6DD5BB1A261D53A300F3D813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DD5BB17261D53A300F3D813 /* Main.storyboard */; };
+		6DE4429A262FC32E00262B58 /* nationality.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6DE44299262FC32E00262B58 /* nationality.txt */; };
+		6DE4429D263036A800262B58 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE4429C263036A700262B58 /* AudioToolbox.framework */; };
+		6DEEDC042629331E001E2200 /* PrePostProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEEDC012629331E001E2200 /* PrePostProcessor.swift */; };
+		6DEEDC052629331E001E2200 /* UIImage+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEEDC022629331E001E2200 /* UIImage+Helper.swift */; };
+		6DEEDC062629331E001E2200 /* ImageRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEEDC032629331E001E2200 /* ImageRatio.swift */; };
+		6DEEDC0926293338001E2200 /* LiveObjectDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEEDC0826293338001E2200 /* LiveObjectDetectionViewController.swift */; };
+		6DEEDC0F262933AC001E2200 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEEDC0C262933AC001E2200 /* CameraController.swift */; };
+		6DEEDC10262933AC001E2200 /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEEDC0D262933AC001E2200 /* CameraPreviewView.swift */; };
+		6DEEDC11262933AC001E2200 /* CVPixelBuffer+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEEDC0E262933AC001E2200 /* CVPixelBuffer+Helper.swift */; };
+		960A3E3126437D720041AAE1 /* best_final.torchscript.pt in Resources */ = {isa = PBXBuildFile; fileRef = 960A3E2E26437D720041AAE1 /* best_final.torchscript.pt */; };
+		963378222681845D001F64DF /* passport_s.torchscript.pt in Resources */ = {isa = PBXBuildFile; fileRef = 963378212681845C001F64DF /* passport_s.torchscript.pt */; };
+		9669EC652640F73700A77837 /* AES128Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9669EC642640F73700A77837 /* AES128Util.swift */; };
+		9669EC672641040000A77837 /* Code1License.lic in Resources */ = {isa = PBXBuildFile; fileRef = 9669EC662641040000A77837 /* Code1License.lic */; };
+		96FB04402648DD3200D438E2 /* yolov5s.torchscript.pt in Resources */ = {isa = PBXBuildFile; fileRef = 96FB043F2648DD3200D438E2 /* yolov5s.torchscript.pt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		266E874C256359E900CF5151 /* ObjectDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectDetector.swift; sourceTree = "<group>"; };
+		269E746E255CC56200B1D6CA /* PassportScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassportScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		269E7471255CC56200B1D6CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		269E7473255CC56200B1D6CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		269E747A255CC56400B1D6CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		269E747F255CC56400B1D6CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		269E7496255CCBA000B1D6CA /* InferenceModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = InferenceModule.mm; sourceTree = "<group>"; };
+		269E7497255CCBA000B1D6CA /* InferenceModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InferenceModule.h; sourceTree = "<group>"; };
+		5786A12C05B2580D32E09295 /* Pods-PassportScan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PassportScan.release.xcconfig"; path = "Target Support Files/Pods-PassportScan/Pods-PassportScan.release.xcconfig"; sourceTree = "<group>"; };
+		6D49261A261172CB00FA4F2E /* TD3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD3.swift; sourceTree = "<group>"; };
+		6D49261B261172CB00FA4F2E /* TD1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD1.swift; sourceTree = "<group>"; };
+		6D49261C261172CB00FA4F2E /* TD2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD2.swift; sourceTree = "<group>"; };
+		6D49261D261172CB00FA4F2E /* MRZParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRZParser.h; sourceTree = "<group>"; };
+		6D49261E261172CB00FA4F2E /* MRZParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRZParser.swift; sourceTree = "<group>"; };
+		6D49261F261172CB00FA4F2E /* MRZFieldFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRZFieldFormatter.swift; sourceTree = "<group>"; };
+		6D492620261172CB00FA4F2E /* String-Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Ext.swift"; sourceTree = "<group>"; };
+		6D492621261172CB00FA4F2E /* MRZResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRZResult.swift; sourceTree = "<group>"; };
+		6D492622261172CB00FA4F2E /* MRZField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRZField.swift; sourceTree = "<group>"; };
+		6DD5BB09261D532000F3D813 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6DD5BB0A261D532000F3D813 /* ResultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
+		6DD5BB0F261D537F00F3D813 /* classes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = classes.txt; sourceTree = "<group>"; };
+		6DD5BB16261D53A300F3D813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6DD5BB18261D53A300F3D813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		6DE44299262FC32E00262B58 /* nationality.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nationality.txt; sourceTree = "<group>"; };
+		6DE4429C263036A700262B58 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6DEEDC012629331E001E2200 /* PrePostProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrePostProcessor.swift; sourceTree = "<group>"; };
+		6DEEDC022629331E001E2200 /* UIImage+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Helper.swift"; sourceTree = "<group>"; };
+		6DEEDC032629331E001E2200 /* ImageRatio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRatio.swift; sourceTree = "<group>"; };
+		6DEEDC0826293338001E2200 /* LiveObjectDetectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveObjectDetectionViewController.swift; sourceTree = "<group>"; };
+		6DEEDC0C262933AC001E2200 /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		6DEEDC0D262933AC001E2200 /* CameraPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPreviewView.swift; sourceTree = "<group>"; };
+		6DEEDC0E262933AC001E2200 /* CVPixelBuffer+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Helper.swift"; sourceTree = "<group>"; };
+		82F3F73D9EAEA3FF18ED39CE /* Pods-PassportScan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PassportScan.debug.xcconfig"; path = "Target Support Files/Pods-PassportScan/Pods-PassportScan.debug.xcconfig"; sourceTree = "<group>"; };
+		960A3E2E26437D720041AAE1 /* best_final.torchscript.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = best_final.torchscript.pt; sourceTree = "<group>"; };
+		963378212681845C001F64DF /* passport_s.torchscript.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = passport_s.torchscript.pt; sourceTree = "<group>"; };
+		96391A1F264021F800BDF3C5 /* PassportScan-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PassportScan-Bridging-Header.h"; sourceTree = "<group>"; };
+		964985CE265B3DD300D6D0E8 /* Python3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python3.framework; path = Library/Frameworks/Python3.framework; sourceTree = DEVELOPER_DIR; };
+		9669EC642640F73700A77837 /* AES128Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES128Util.swift; sourceTree = "<group>"; };
+		9669EC662641040000A77837 /* Code1License.lic */ = {isa = PBXFileReference; lastKnownFileType = text; path = Code1License.lic; sourceTree = "<group>"; };
+		96FB043F2648DD3200D438E2 /* yolov5s.torchscript.pt */ = {isa = PBXFileReference; lastKnownFileType = file; path = yolov5s.torchscript.pt; sourceTree = "<group>"; };
+		F57B91C286C71F3E271E3228 /* Pods_PassportScan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PassportScan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		269E746B255CC56200B1D6CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D93AD83CA851C20568DBC3F /* Pods_PassportScan.framework in Frameworks */,
+				6DE4429D263036A800262B58 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		269E7465255CC56200B1D6CA = {
+			isa = PBXGroup;
+			children = (
+				269E7470255CC56200B1D6CA /* PassportScan */,
+				269E746F255CC56200B1D6CA /* Products */,
+				A3F013A889E9B190698071B6 /* Pods */,
+				ACCB9A01DFD2B447586C3097 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		269E746F255CC56200B1D6CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				269E746E255CC56200B1D6CA /* PassportScan.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		269E7470255CC56200B1D6CA /* PassportScan */ = {
+			isa = PBXGroup;
+			children = (
+				6DEEDC0B262933AC001E2200 /* Camera */,
+				6DEEDC002629331E001E2200 /* Utils */,
+				6DD5BB14261D53A300F3D813 /* Base.lproj */,
+				6DD5BB0E261D537E00F3D813 /* Model */,
+				6DD5BB08261D532000F3D813 /* Controller */,
+				6D492618261172CA00FA4F2E /* Parser */,
+				26FAB56C256700A600EA6ED6 /* Inference */,
+				269E7471255CC56200B1D6CA /* AppDelegate.swift */,
+				269E7473255CC56200B1D6CA /* SceneDelegate.swift */,
+				269E747A255CC56400B1D6CA /* Assets.xcassets */,
+				269E747F255CC56400B1D6CA /* Info.plist */,
+			);
+			path = PassportScan;
+			sourceTree = "<group>";
+		};
+		26FAB56C256700A600EA6ED6 /* Inference */ = {
+			isa = PBXGroup;
+			children = (
+				269E7497255CCBA000B1D6CA /* InferenceModule.h */,
+				96391A1F264021F800BDF3C5 /* PassportScan-Bridging-Header.h */,
+				269E7496255CCBA000B1D6CA /* InferenceModule.mm */,
+				266E874C256359E900CF5151 /* ObjectDetector.swift */,
+			);
+			path = Inference;
+			sourceTree = "<group>";
+		};
+		6D492618261172CA00FA4F2E /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				6D492619261172CA00FA4F2E /* Parsers */,
+				6D49261D261172CB00FA4F2E /* MRZParser.h */,
+				6D49261E261172CB00FA4F2E /* MRZParser.swift */,
+				6D49261F261172CB00FA4F2E /* MRZFieldFormatter.swift */,
+				6D492620261172CB00FA4F2E /* String-Ext.swift */,
+				6D492621261172CB00FA4F2E /* MRZResult.swift */,
+				6D492622261172CB00FA4F2E /* MRZField.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		6D492619261172CA00FA4F2E /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				6D49261A261172CB00FA4F2E /* TD3.swift */,
+				6D49261B261172CB00FA4F2E /* TD1.swift */,
+				6D49261C261172CB00FA4F2E /* TD2.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		6DD5BB08261D532000F3D813 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6DD5BB09261D532000F3D813 /* ViewController.swift */,
+				6DEEDC0826293338001E2200 /* LiveObjectDetectionViewController.swift */,
+				6DD5BB0A261D532000F3D813 /* ResultController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6DD5BB0E261D537E00F3D813 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				963378212681845C001F64DF /* passport_s.torchscript.pt */,
+				6DE44299262FC32E00262B58 /* nationality.txt */,
+				96FB043F2648DD3200D438E2 /* yolov5s.torchscript.pt */,
+				960A3E2E26437D720041AAE1 /* best_final.torchscript.pt */,
+				6DD5BB0F261D537F00F3D813 /* classes.txt */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6DD5BB14261D53A300F3D813 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				6DD5BB15261D53A300F3D813 /* LaunchScreen.storyboard */,
+				6DD5BB17261D53A300F3D813 /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		6DEEDC002629331E001E2200 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6DEEDC012629331E001E2200 /* PrePostProcessor.swift */,
+				6DEEDC022629331E001E2200 /* UIImage+Helper.swift */,
+				6DEEDC032629331E001E2200 /* ImageRatio.swift */,
+				9669EC642640F73700A77837 /* AES128Util.swift */,
+				9669EC662641040000A77837 /* Code1License.lic */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6DEEDC0B262933AC001E2200 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				6DEEDC0C262933AC001E2200 /* CameraController.swift */,
+				6DEEDC0D262933AC001E2200 /* CameraPreviewView.swift */,
+				6DEEDC0E262933AC001E2200 /* CVPixelBuffer+Helper.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		A3F013A889E9B190698071B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82F3F73D9EAEA3FF18ED39CE /* Pods-PassportScan.debug.xcconfig */,
+				5786A12C05B2580D32E09295 /* Pods-PassportScan.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ACCB9A01DFD2B447586C3097 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				964985CE265B3DD300D6D0E8 /* Python3.framework */,
+				6DE4429C263036A700262B58 /* AudioToolbox.framework */,
+				F57B91C286C71F3E271E3228 /* Pods_PassportScan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		269E746D255CC56200B1D6CA /* PassportScan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 269E7482255CC56400B1D6CA /* Build configuration list for PBXNativeTarget "PassportScan" */;
+			buildPhases = (
+				1917CA07F869CB14C0656AD0 /* [CP] Check Pods Manifest.lock */,
+				269E746A255CC56200B1D6CA /* Sources */,
+				269E746B255CC56200B1D6CA /* Frameworks */,
+				269E746C255CC56200B1D6CA /* Resources */,
+				B756FBBA6608BA7CACD0916A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PassportScan;
+			productName = ObjectDetection;
+			productReference = 269E746E255CC56200B1D6CA /* PassportScan.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		269E7466255CC56200B1D6CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					269E746D255CC56200B1D6CA = {
+						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
+					};
+				};
+			};
+			buildConfigurationList = 269E7469255CC56200B1D6CA /* Build configuration list for PBXProject "PassportScan" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 269E7465255CC56200B1D6CA;
+			productRefGroup = 269E746F255CC56200B1D6CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				269E746D255CC56200B1D6CA /* PassportScan */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		269E746C255CC56200B1D6CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DD5BB1A261D53A300F3D813 /* Main.storyboard in Resources */,
+				9669EC672641040000A77837 /* Code1License.lic in Resources */,
+				6DE4429A262FC32E00262B58 /* nationality.txt in Resources */,
+				960A3E3126437D720041AAE1 /* best_final.torchscript.pt in Resources */,
+				96FB04402648DD3200D438E2 /* yolov5s.torchscript.pt in Resources */,
+				269E747B255CC56400B1D6CA /* Assets.xcassets in Resources */,
+				963378222681845D001F64DF /* passport_s.torchscript.pt in Resources */,
+				6DD5BB11261D537F00F3D813 /* classes.txt in Resources */,
+				6DD5BB19261D53A300F3D813 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1917CA07F869CB14C0656AD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PassportScan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B756FBBA6608BA7CACD0916A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PassportScan/Pods-PassportScan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PassportScan/Pods-PassportScan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PassportScan/Pods-PassportScan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		269E746A255CC56200B1D6CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9669EC652640F73700A77837 /* AES128Util.swift in Sources */,
+				6D492626261172CB00FA4F2E /* MRZParser.swift in Sources */,
+				6DEEDC052629331E001E2200 /* UIImage+Helper.swift in Sources */,
+				6DD5BB0C261D532000F3D813 /* ResultController.swift in Sources */,
+				269E7498255CCBA000B1D6CA /* InferenceModule.mm in Sources */,
+				6D49262A261172CB00FA4F2E /* MRZField.swift in Sources */,
+				266E874D256359E900CF5151 /* ObjectDetector.swift in Sources */,
+				6D492628261172CB00FA4F2E /* String-Ext.swift in Sources */,
+				6DEEDC062629331E001E2200 /* ImageRatio.swift in Sources */,
+				6D492627261172CB00FA4F2E /* MRZFieldFormatter.swift in Sources */,
+				269E7472255CC56200B1D6CA /* AppDelegate.swift in Sources */,
+				6D492624261172CB00FA4F2E /* TD1.swift in Sources */,
+				6D492623261172CB00FA4F2E /* TD3.swift in Sources */,
+				6D492625261172CB00FA4F2E /* TD2.swift in Sources */,
+				6DEEDC0F262933AC001E2200 /* CameraController.swift in Sources */,
+				6DEEDC0926293338001E2200 /* LiveObjectDetectionViewController.swift in Sources */,
+				6DD5BB0B261D532000F3D813 /* ViewController.swift in Sources */,
+				6DEEDC11262933AC001E2200 /* CVPixelBuffer+Helper.swift in Sources */,
+				6DEEDC10262933AC001E2200 /* CameraPreviewView.swift in Sources */,
+				6D492629261172CB00FA4F2E /* MRZResult.swift in Sources */,
+				6DEEDC042629331E001E2200 /* PrePostProcessor.swift in Sources */,
+				269E7474255CC56200B1D6CA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6DD5BB15261D53A300F3D813 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DD5BB16261D53A300F3D813 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6DD5BB17261D53A300F3D813 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DD5BB18261D53A300F3D813 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		269E7480255CC56400B1D6CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		269E7481255CC56400B1D6CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		269E7483255CC56400B1D6CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82F3F73D9EAEA3FF18ED39CE /* Pods-PassportScan.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52BTWK2QYM;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = PassportScan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.code1system.passport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sukhongcho/Desktop/passport_ios/PassportScan/Inference/PassportScan-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		269E7484255CC56400B1D6CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5786A12C05B2580D32E09295 /* Pods-PassportScan.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52BTWK2QYM;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = PassportScan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.code1system.passport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sukhongcho/Desktop/passport_ios/PassportScan/Inference/PassportScan-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		269E7469255CC56200B1D6CA /* Build configuration list for PBXProject "PassportScan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				269E7480255CC56400B1D6CA /* Debug */,
+				269E7481255CC56400B1D6CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		269E7482255CC56400B1D6CA /* Build configuration list for PBXNativeTarget "PassportScan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				269E7483255CC56400B1D6CA /* Debug */,
+				269E7484255CC56400B1D6CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 269E7466255CC56200B1D6CA /* Project object */;
+}
