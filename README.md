@@ -1,2 +1,2 @@
 # PSii
-PSii
+PSii server
